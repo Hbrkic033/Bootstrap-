@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="bs" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nova Studio je primjer moderne i responzivne web stranice izrađene korištenjem Bootstrap 5 frameworka.">
+  <meta name="author" content="Huso Brkić">
+
+  <title>Nova Studio | Moderna Bootstrap web stranica</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Vlastiti CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Jednostavan SVG favicon ugrađen u dokument -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%236c5ce7'/%3E%3Cpath d='M16 45V19h7l18 16V19h7v26h-7L23 29v16z' fill='white'/%3E%3C/svg%3E">
+</head>
+
+<body>
+  <!-- Link za pristupačnost: pojavljuje se kada korisnik koristi tastaturu -->
+  <a class="skip-link" href="#glavni-sadrzaj">Preskoči na glavni sadržaj</a>
+
+  <!-- NAVIGACIJA: Bootstrap navbar, sticky pozicija i collapse na manjim ekranima -->
+  <nav id="glavnaNavigacija" class="navbar navbar-expand-lg fixed-top" aria-label="Glavna navigacija">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#pocetna" aria-label="Nova Studio - početna">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>NOVA<span class="text-gradient">.</span></span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSadrzaj" aria-controls="navbarSadrzaj" aria-expanded="false" aria-label="Otvori navigaciju">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSadrzaj">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#pocetna">Početna</a></li>
+          <li class="nav-item"><a class="nav-link" href="#o-nama">O nama</a></li>
+          <li class="nav-item"><a class="nav-link" href="#usluge">Usluge</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projekti">Projekti</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2">
+          <button id="temaDugme" class="btn btn-icon" type="button" aria-label="Uključi tamnu temu" title="Promijeni temu">
+            <i class="bi bi-moon-stars" aria-hidden="true"></i>
+          </button>
+          <a href="#kontakt" class="btn btn-primary d-none d-lg-inline-flex">Započni projekat</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="glavni-sadrzaj">
+    <!-- HERO SEKCIJA: Bootstrap grid sa dvije kolone -->
+    <header id="pocetna" class="hero-section overflow-hidden">
+      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+
+      <div class="container position-relative">
+        <div class="row align-items-center gy-5 min-vh-100 py-5">
+          <div class="col-lg-6 pt-5 pt-lg-0">
+            <span class="section-kicker reveal-item">
+              <i class="bi bi-stars" aria-hidden="true"></i>
+              Dizajn koji donosi rezultate
+            </span>
+
+            <h1 class="display-2 fw-bold mt-4 mb-4 reveal-item">
+              Gradimo digitalna iskustva koja se <span class="text-gradient">pamte.</span>
+            </h1>
+
+            <p class="hero-lead mb-4 reveal-item">
+              Pomažemo ambicioznim kompanijama da kroz moderan web dizajn, jasan sadržaj i pametnu strategiju ostvare mjerljiv rast.
+            </p>
+
+            <div class="d-flex flex-column flex-sm-row gap-3 reveal-item">
+              <a href="#kontakt" class="btn btn-primary btn-lg">
+                Zatražite ponudu <i class="bi bi-arrow-up-right ms-2" aria-hidden="true"></i>
+              </a>
+              <a href="#projekti" class="btn btn-outline-secondary btn-lg">
+                Pogledajte projekte
+              </a>
+            </div>
+
+            <div class="d-flex flex-wrap align-items-center gap-4 mt-5 hero-proof reveal-item">
+              <div class="avatar-stack" aria-label="Više od 40 zadovoljnih klijenata">
+                <span>AM</span><span>MK</span><span>LB</span><span>+</span>
+              </div>
+              <div>
+                <div class="stars" aria-label="Ocjena pet od pet">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <small class="text-body-secondary">Povjerenje više od 40 klijenata</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <!-- Apstraktni prikaz web interfejsa napravljen HTML/CSS elementima -->
+            <div class="hero-visual reveal-item" aria-label="Prikaz modernog korisničkog interfejsa">
+              <div class="browser-window">
+                <div class="browser-bar">
+                  <div class="browser-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                  <div class="browser-address">novastudio.ba</div>
+                  <i class="bi bi-shield-check" aria-hidden="true"></i>
+                </div>
+                <div class="browser-content">
+                  <div class="mock-sidebar">
+                    <div class="mock-logo">N</div>
+                    <span class="active"></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="mock-dashboard">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <small>Pregled kampanje</small>
+                        <h2>Digitalni rast</h2>
+                      </div>
+                      <span class="mock-pill">+24,8%</span>
+                    </div>
+                    <div class="mock-chart mt-4" aria-hidden="true">
+                      <span style="height: 34%"></span><span style="height: 48%"></span><span style="height: 42%"></span><span style="height: 66%"></span><span style="height: 58%"></span><span style="height: 82%"></span><span style="height: 94%"></span>
+                    </div>
+                    <div class="row g-3 mt-2">
+                      <div class="col-6"><div class="metric-card"><i class="bi bi-eye"></i><strong>128K</strong><small>Pregleda</small></div></div>
+                      <div class="col-6"><div class="metric-card"><i class="bi bi-graph-up-arrow"></i><strong>36%</strong><small>Konverzija</small></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="floating-card floating-card-top">
+                <i class="bi bi-check-circle-fill"></i>
+                <span><strong>Projekat završen</strong><small>Prije zadanog roka</small></span>
+              </div>
+              <div class="floating-card floating-card-bottom">
+                <span class="mini-chart"><i></i><i></i><i></i><i></i></span>
+                <span><strong>+68%</strong><small>Organski promet</small></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#o-nama" class="scroll-indicator" aria-label="Pomjeri se na sljedeću sekciju">
+        <span></span>
+      </a>
+    </header>
+
+    <!-- PARTNERI -->
+    <section class="logo-strip border-top border-bottom" aria-label="Tehnologije koje koristimo">
+      <div class="container">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4 align-items-center text-center">
+          <div class="col"><span><i class="bi bi-bootstrap-fill"></i> Bootstrap</span></div>
+          <div class="col"><span><i class="bi bi-wordpress"></i> WordPress</span></div>
+          <div class="col"><span><i class="bi bi-google"></i> Google</span></div>
+          <div class="col"><span><i class="bi bi-meta"></i> Meta</span></div>
+          <div class="col"><span><i class="bi bi-github"></i> GitHub</span></div>
+          <div class="col"><span><i class="bi bi-cloud"></i> Cloud</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- O NAMA -->
+    <section id="o-nama" class="section-padding">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-5">
+            <span class="section-kicker"><i class="bi bi-people" aria-hidden="true"></i> O nama</span>
+            <h2 class="section-title mt-3">Mali tim. Velike ideje. <span class="text-gradient">Stvarni rezultati.</span></h2>
+            <p class="section-copy mt-4">Nova Studio je kreativni digitalni tim fokusiran na izradu brzih, pristupačnih i vizuelno upečatljivih web rješenja.</p>
+            <p class="text-body-secondary">Svaki projekat započinjemo razumijevanjem poslovnog cilja. Zatim spajamo strategiju, dizajn i tehnologiju u iskustvo koje je jednostavno za korištenje i lako za održavanje.</p>
+            <a href="#proces" class="link-arrow mt-2">Upoznajte naš proces <i class="bi bi-arrow-right"></i></a>
+          </div>
+
+          <div class="col-lg-6 offset-lg-1">
+            <div class="row g-3 stats-grid">
+              <div class="col-6">
+                <article class="stat-card">
+                  <i class="bi bi-briefcase"></i>
+                  <strong><span class="counter" data-target="85">0</span>+</strong>
+                  <span>Realizovanih projekata</span>
+                </article>
+              </div>
+              <div class="col-6 mt-4">
+                <article class="stat-card stat-card-accent">
+                  <i class="bi bi-emoji-smile"></i>
+                  <strong><span class="counter" data-target="97">0</span>%</strong>
+                  <span>Zadovoljnih klijenata</span>
+                </article>
+              </div>
+              <div class="col-6">
+                <article class="stat-card">
+                  <i class="bi bi-calendar-check"></i>
+                  <strong><span class="counter" data-target="6">0</span></strong>
+                  <span>Godina iskustva</span>
+                </article>
+              </div>
+              <div class="col-6 mt-4">
+                <article class="stat-card">
+                  <i class="bi bi-headset"></i>
+                  <strong>24h</strong>
+                  <span>Prosječan odgovor</span>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- USLUGE: Bootstrap kartice u responzivnom gridu -->
+    <section id="usluge" class="section-padding bg-soft">
+      <div class="container">
+        <div class="row align-items-end mb-5 gy-3">
+          <div class="col-lg-7">
+            <span class="section-kicker"><i class="bi bi-grid" aria-hidden="true"></i> Naše usluge</span>
+            <h2 class="section-title mt-3 mb-0">Sve što je potrebno za snažan <span class="text-gradient">digitalni nastup.</span></h2>
+          </div>
+          <div class="col-lg-5">
+            <p class="section-copy mb-0">Od prve skice do lansiranja i kontinuiranog razvoja — preuzimamo kompletan digitalni proces.</p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4">
+            <article class="service-card h-100">
+              <div class="service-icon"><i class="bi bi-window-stack"></i></div>
+              <span class="service-number">01</span>
+              <h3>Web dizajn i razvoj</h3>
+              <p>Kreiramo moderne, brze i potpuno responzivne web stranice prilagođene vašem poslovanju.</p>
+              <ul class="list-unstyled service-list">
+                <li><i class="bi bi-check2"></i> UX/UI dizajn</li>
+                <li><i class="bi bi-check2"></i> Bootstrap razvoj</li>
+                <li><i class="bi bi-check2"></i> CMS implementacija</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <article class="service-card h-100 featured">
+              <span class="popular-badge">Najtraženije</span>
+              <div class="service-icon"><i class="bi bi-megaphone"></i></div>
+              <span class="service-number">02</span>
+              <h3>Digitalni marketing</h3>
+              <p>Planiramo kampanje koje dolaze do pravih ljudi i pretvaraju pažnju u konkretne rezultate.</p>
+              <ul class="list-unstyled service-list">
+                <li><i class="bi bi-check2"></i> Google i Meta oglasi</li>
+                <li><i class="bi bi-check2"></i> Društvene mreže</li>
+                <li><i class="bi bi-check2"></i> Analitika i izvještaji</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <article class="service-card h-100">
+              <div class="service-icon"><i class="bi bi-search"></i></div>
+              <span class="service-number">03</span>
+              <h3>SEO optimizacija</h3>
+              <p>Povećavamo organsku vidljivost kroz tehničku optimizaciju, sadržaj i praćenje pozicija.</p>
+              <ul class="list-unstyled service-list">
+                <li><i class="bi bi-check2"></i> SEO analiza</li>
+                <li><i class="bi bi-check2"></i> Optimizacija sadržaja</li>
+                <li><i class="bi bi-check2"></i> Mjerenje performansi</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJEKTI: filteri implementirani JavaScriptom -->
+    <section id="projekti" class="section-padding">
+      <div class="container">
+        <div class="text-center mx-auto section-heading">
+          <span class="section-kicker"><i class="bi bi-folder2-open" aria-hidden="true"></i> Izdvojeni radovi</span>
+          <h2 class="section-title mt-3">Projekti na koje smo <span class="text-gradient">ponosni.</span></h2>
+          <p class="section-copy">Svaki projekat je drugačiji, ali cilj ostaje isti: jasno iskustvo i rezultat koji se može izmjeriti.</p>
+        </div>
+
+        <div class="project-filters d-flex flex-wrap justify-content-center gap-2 my-5" role="group" aria-label="Filtriranje projekata">
+          <button class="btn filter-btn active" type="button" data-filter="sve">Svi projekti</button>
+          <button class="btn filter-btn" type="button" data-filter="web">Web dizajn</button>
+          <button class="btn filter-btn" type="button" data-filter="brending">Brending</button>
+          <button class="btn filter-btn" type="button" data-filter="marketing">Marketing</button>
+        </div>
+
+        <div class="row g-4" id="projektiMreza">
+          <div class="col-md-6 project-item" data-category="web">
+            <article class="project-card">
+              <div class="project-visual project-visual-one">
+                <div class="project-browser">
+                  <div class="project-browser-bar"><span></span><span></span><span></span></div>
+                  <div class="project-ui">
+                    <div class="ui-nav"></div>
+                    <div class="ui-heading"></div>
+                    <div class="ui-copy"></div>
+                    <div class="ui-button"></div>
+                    <div class="ui-cards"><i></i><i></i><i></i></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-body">
+                <div><span>Web dizajn</span><h3>FinFlow platforma</h3></div>
+                <button class="project-link" type="button" data-bs-toggle="modal" data-bs-target="#projekatModal" data-project="finflow" aria-label="Detalji projekta FinFlow"><i class="bi bi-arrow-up-right"></i></button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 project-item" data-category="brending">
+            <article class="project-card">
+              <div class="project-visual project-visual-two">
+                <div class="brand-poster"><span>A</span><strong>ARCO</strong><small>Architecture for people</small></div>
+              </div>
+              <div class="project-body">
+                <div><span>Brending</span><h3>Arco arhitektura</h3></div>
+                <button class="project-link" type="button" data-bs-toggle="modal" data-bs-target="#projekatModal" data-project="arco" aria-label="Detalji projekta Arco"><i class="bi bi-arrow-up-right"></i></button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 project-item" data-category="marketing">
+            <article class="project-card">
+              <div class="project-visual project-visual-three">
+                <div class="campaign-phone"><span class="phone-notch"></span><i class="bi bi-lightning-charge-fill"></i><strong>MOVE</strong><small>Pokreni svoju energiju.</small></div>
+                <div class="campaign-stat">+82%<small>angažman</small></div>
+              </div>
+              <div class="project-body">
+                <div><span>Digitalni marketing</span><h3>Move kampanja</h3></div>
+                <button class="project-link" type="button" data-bs-toggle="modal" data-bs-target="#projekatModal" data-project="move" aria-label="Detalji projekta Move"><i class="bi bi-arrow-up-right"></i></button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 project-item" data-category="web">
+            <article class="project-card">
+              <div class="project-visual project-visual-four">
+                <div class="shop-card"><i class="bi bi-bag-heart"></i><strong>LUMA</strong><span>New collection</span><button type="button" tabindex="-1">Shop now</button></div>
+              </div>
+              <div class="project-body">
+                <div><span>E-commerce</span><h3>Luma online shop</h3></div>
+                <button class="project-link" type="button" data-bs-toggle="modal" data-bs-target="#projekatModal" data-project="luma" aria-label="Detalji projekta Luma"><i class="bi bi-arrow-up-right"></i></button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCES -->
+    <section id="proces" class="section-padding bg-dark-section text-white">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-4">
+            <span class="section-kicker section-kicker-dark"><i class="bi bi-signpost-split" aria-hidden="true"></i> Kako radimo</span>
+            <h2 class="section-title mt-3">Od ideje do uspješnog <span class="text-gradient">lansiranja.</span></h2>
+            <p class="text-white-50 mt-4">Transparentan proces bez komplikacija. U svakom trenutku znate šta radimo i koji je sljedeći korak.</p>
+          </div>
+
+          <div class="col-lg-7 offset-lg-1">
+            <div class="process-list">
+              <article class="process-item">
+                <span>01</span><div><h3>Analiza i strategija</h3><p>Upoznajemo vaše poslovanje, korisnike, konkurenciju i ciljeve projekta.</p></div>
+              </article>
+              <article class="process-item">
+                <span>02</span><div><h3>Dizajn i prototip</h3><p>Planiramo strukturu sadržaja i izrađujemo vizuelni pravac buduće stranice.</p></div>
+              </article>
+              <article class="process-item">
+                <span>03</span><div><h3>Razvoj i testiranje</h3><p>Pretvaramo dizajn u brz, responzivan i pristupačan web interfejs.</p></div>
+              </article>
+              <article class="process-item">
+                <span>04</span><div><h3>Lansiranje i podrška</h3><p>Objavljujemo projekat, pratimo rezultate i ostajemo dostupni za razvoj.</p></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL + FAQ: Carousel i Accordion Bootstrap komponente -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-6">
+            <span class="section-kicker"><i class="bi bi-chat-quote" aria-hidden="true"></i> Iskustva klijenata</span>
+            <h2 class="section-title mt-3 mb-4">Najbolje o nama govore <span class="text-gradient">naši klijenti.</span></h2>
+
+            <div id="utisciCarousel" class="carousel slide testimonial-card" data-bs-ride="carousel" data-bs-interval="6000">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <i class="bi bi-quote quote-icon"></i>
+                  <blockquote>Nova Studio je potpuno razumio naš cilj. Nova stranica je brža, jasnija i već u prvom mjesecu donijela je više kvalitetnih upita.</blockquote>
+                  <div class="testimonial-author"><span>AH</span><div><strong>Adnan H.</strong><small>Direktor, FinFlow</small></div></div>
+                </div>
+                <div class="carousel-item">
+                  <i class="bi bi-quote quote-icon"></i>
+                  <blockquote>Od prvog sastanka do lansiranja komunikacija je bila jasna, a rokovi precizni. Dobili smo identitet koji zaista predstavlja naš studio.</blockquote>
+                  <div class="testimonial-author"><span>LM</span><div><strong>Lejla M.</strong><small>Osnivačica, Arco</small></div></div>
+                </div>
+                <div class="carousel-item">
+                  <i class="bi bi-quote quote-icon"></i>
+                  <blockquote>Kampanja je premašila planirane rezultate, a izvještaji su bili razumljivi i konkretni. Saradnju svakako nastavljamo.</blockquote>
+                  <div class="testimonial-author"><span>DK</span><div><strong>Damir K.</strong><small>Marketing menadžer, Move</small></div></div>
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button type="button" data-bs-target="#utisciCarousel" data-bs-slide="prev" aria-label="Prethodni utisak"><i class="bi bi-arrow-left"></i></button>
+                <button type="button" data-bs-target="#utisciCarousel" data-bs-slide="next" aria-label="Sljedeći utisak"><i class="bi bi-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 offset-lg-1">
+            <span class="section-kicker"><i class="bi bi-question-circle" aria-hidden="true"></i> Česta pitanja</span>
+            <h2 class="section-title mt-3 mb-4">Imate pitanje?</h2>
+
+            <div class="accordion accordion-flush custom-accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">Koliko traje izrada web stranice?</button></h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Standardna prezentacijska stranica najčešće se realizuje u periodu od tri do šest sedmica, zavisno od obima sadržaja i funkcionalnosti.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">Da li će stranica raditi na mobilnim uređajima?</button></h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Da. Koristimo mobile-first pristup i testiramo prikaz na mobilnim, tablet i desktop rezolucijama.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Mogu li kasnije sam uređivati sadržaj?</button></h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Možete. Po potrebi implementiramo sistem za upravljanje sadržajem i osiguravamo kratku obuku nakon završetka projekta.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">Nudite li održavanje nakon izrade?</button></h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Da. Paketi održavanja uključuju sigurnosne nadogradnje, rezervne kopije, praćenje rada i manje izmjene sadržaja.</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT: Bootstrap forma sa HTML5 i JavaScript validacijom -->
+    <section id="kontakt" class="section-padding bg-soft">
+      <div class="container">
+        <div class="contact-shell">
+          <div class="row g-0">
+            <div class="col-lg-5 contact-info">
+              <span class="section-kicker section-kicker-dark"><i class="bi bi-send" aria-hidden="true"></i> Kontakt</span>
+              <h2 class="section-title mt-3">Imate ideju? Pretvorimo je u <span class="text-gradient">rezultat.</span></h2>
+              <p class="text-white-50 mt-4">Pošaljite osnovne informacije o projektu. Odgovorit ćemo u roku od jednog radnog dana.</p>
+
+              <address class="contact-list mt-5">
+                <a href="mailto:hello@novastudio.ba"><i class="bi bi-envelope"></i><span><small>E-mail</small>hello@novastudio.ba</span></a>
+                <a href="tel:+38732123456"><i class="bi bi-telephone"></i><span><small>Telefon</small>+387 32 123 456</span></a>
+                <p><i class="bi bi-geo-alt"></i><span><small>Lokacija</small>Tešanj, Bosna i Hercegovina</span></p>
+              </address>
+
+              <div class="social-links mt-5">
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-7 contact-form-wrap">
+              <form id="kontaktForma" class="needs-validation" novalidate>
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <label for="ime" class="form-label">Ime i prezime</label>
+                    <input id="ime" name="ime" type="text" class="form-control" placeholder="Vaše ime" minlength="3" required>
+                    <div class="invalid-feedback">Unesite ime i prezime.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">E-mail adresa</label>
+                    <input id="email" name="email" type="email" class="form-control" placeholder="ime@firma.ba" required>
+                    <div class="invalid-feedback">Unesite ispravnu e-mail adresu.</div>
+                  </div>
+                  <div class="col-12">
+                    <label for="usluga" class="form-label">Usluga</label>
+                    <select id="usluga" name="usluga" class="form-select" required>
+                      <option value="" selected disabled>Odaberite uslugu</option>
+                      <option>Web dizajn i razvoj</option>
+                      <option>Digitalni marketing</option>
+                      <option>SEO optimizacija</option>
+                      <option>Brending</option>
+                    </select>
+                    <div class="invalid-feedback">Odaberite željenu uslugu.</div>
+                  </div>
+                  <div class="col-12">
+                    <label for="poruka" class="form-label">Opišite projekat</label>
+                    <textarea id="poruka" name="poruka" class="form-control" rows="5" placeholder="Napišite nekoliko rečenica o projektu..." minlength="10" required></textarea>
+                    <div class="invalid-feedback">Poruka mora sadržavati najmanje 10 znakova.</div>
+                  </div>
+                  <div class="col-12 d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3">
+                    <small class="text-body-secondary"><i class="bi bi-lock me-1"></i> Vaši podaci ostaju sigurni.</small>
+                    <button class="btn btn-primary btn-lg" type="submit">Pošalji upit <i class="bi bi-arrow-right ms-2"></i></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-md-4">
+          <a class="footer-brand d-inline-flex align-items-center gap-2" href="#pocetna"><span class="brand-mark">N</span><span>NOVA<span class="text-gradient">.</span></span></a>
+        </div>
+        <div class="col-md-4 text-md-center">
+          <p class="mb-0">&copy; <span id="trenutnaGodina"></span> Nova Studio. Sva prava zadržana.</p>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <a href="#pocetna">Politika privatnosti</a><span class="mx-2">·</span><a href="#pocetna">Uslovi korištenja</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dugme za povratak na vrh -->
+  <button id="nazadNaVrh" class="back-to-top" type="button" aria-label="Nazad na vrh"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Bootstrap Modal: sadržaj se mijenja JavaScriptom -->
+  <div class="modal fade" id="projekatModal" tabindex="-1" aria-labelledby="modalNaslov" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0">
+        <div class="modal-header border-0">
+          <div><span id="modalKategorija" class="modal-category"></span><h2 id="modalNaslov" class="modal-title"></h2></div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zatvori"></button>
+        </div>
+        <div class="modal-body pt-0">
+          <p id="modalOpis" class="lead"></p>
+          <div class="row g-3 mt-2" id="modalRezultati"></div>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Zatvori</button>
+          <a href="#kontakt" class="btn btn-primary" data-bs-dismiss="modal">Želim sličan projekat</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast obavijest nakon uspješnog slanja forme -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="uspjehToast" class="toast border-0" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body"><i class="bi bi-check-circle-fill me-2"></i> Upit je uspješno pripremljen. Hvala!</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Zatvori"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript Bundle uključuje Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Vlastiti JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
